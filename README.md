@@ -1,4 +1,4 @@
-# claude-session-commit
+# claude-commit-session-id
 
 Automatically embed Claude Code session IDs into your git commit messages, so you can resume any conversation directly from your git history.
 
@@ -6,7 +6,7 @@ Ever finished a coding session with Claude Code, come back days later to a commi
 
 ## How it works
 
-`claude-session-commit` is a [Claude Code hook](https://code.claude.com/docs/en/hooks) that listens for `git commit` commands. When Claude Code runs a commit, the hook:
+`claude-commit-session-id` is a [Claude Code hook](https://code.claude.com/docs/en/hooks) that listens for `git commit` commands. When Claude Code runs a commit, the hook:
 
 1. Reads the JSON payload from stdin (which includes `session_id`)
 2. Checks whether the Bash command was a `git commit`
@@ -43,8 +43,8 @@ claude --resume eb5b0174-0555-4601-804e-672d68069c89
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourname/claude-session-commit.git
-cd claude-session-commit
+git clone https://github.com/yourname/claude-commit-session-id.git
+cd claude-commit-session-id
 
 # Run the installer
 ./install.sh
